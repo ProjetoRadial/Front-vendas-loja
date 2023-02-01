@@ -1,0 +1,26 @@
+			Loja Onpag	
+				
+Av. Jorge bei Maluf s/n Terminal Municipal Suzano
+Vila Theodoro, Suzano - SP 08686-000
+CNPJ: 44.335.701-0001-57
+IE: 6699439042 
+-------------------------------------------------------
+
+                NÃO É DOCUMENTO FISCAL
+      	    COMPROVANTE NÃO-FISCAL
+
+COD		ITEM				QTD	VALOR
+0001 - TARIFA CARTÃO ESTUDANTE	1	R$ 13,50
+0015 - RECARGA 				1	R$ 50,00
+
+TOTAL.....................................R$ 62,50
+
+------------------------------------------------------
+CODIGO		NOME				CARTÃO
+154813  -  WESLEY ARAUJO VIEIRA	57.04.00096899-1
+
+
+
+------------------------------------------------------
+01/02/2023	14:00:01	ID: 0000001	COD:0000001
+------------------------------------------------------
