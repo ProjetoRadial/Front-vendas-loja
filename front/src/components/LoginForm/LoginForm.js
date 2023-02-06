@@ -5,7 +5,7 @@ export const LoginForm = () => {
         <div className="container py-5 h-100">
             <div className="row d-flex justify-content-center align-content-center h-100">
                 <div className="col-12 col-md-8 col-lg-6 col-xl-5">
-                    <div className="card bg-dark text-white" style={{ "border-radius": "1rem" }}>
+                    <div className="card bg-dark text-white" style={{ "border-radius": "2rem" }}>
                         <div className="card-body p-5 text-center">
                             <div className="mt-md-4 pb-3">
                                 <img src={OnpagLogo} style={{ "height": "40px" }} alt="Onpag Logo"></img>
@@ -19,8 +19,7 @@ export const LoginForm = () => {
                                     <input type="password" id="" className="form-control form-control-lg" />
                                     <label className="form-label mt-2" for="">Senha</label>
                                 </div>
-                                <button className="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
-
+                                <button className="btn btn-outline-light btn-lg px-5" type="submit">Entrar</button>
                             </div>
                         </div>
                     </div>
