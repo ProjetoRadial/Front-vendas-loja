@@ -1,35 +1,40 @@
 import OnpagLogo from "../../images/logoOnpag.png"
-import DashboardLogo from "../../images/dashboard-icon.png"
+import SidebarItem from "./SidebarItem"
+import DashboardIcon from "../../images/dashboard-icon.png"
+import VendasIcon from "../../images/vendas-icon.png"
+import AgendamentosIcon from "../../images/agendamentos-icon.png"
+import ProdutosIcon from "../../images/produtos-icon.png"
+import UsuariosIcon from "../../images/usuarios-icon.png"
 
-const items = [
+const itemsSidebar = [
     {
         id: 1,
         name: "Dashboard",
-        icon: DashboardLogo,
+        icon: DashboardIcon,
         link: "/",
     },
     {
         id: 2,
         name: "Vendas",
-        icon: DashboardLogo,
+        icon: VendasIcon,
         link: "/vendas",
     },
     {
         id: 3,
         name: "Agendamentos",
-        icon: DashboardLogo,
+        icon: AgendamentosIcon,
         link: "/agendamentos",
     },
     {
         id: 4,
         name: "Produtos",
-        icon: DashboardLogo,
+        icon: ProdutosIcon,
         link: "/produtos",
     },
     {
         id: 5,
         name: "Usuários",
-        icon: DashboardLogo,
+        icon: UsuariosIcon,
         link: "/usuarios",
     },
 ];
@@ -47,32 +52,9 @@ export const Sidebar = () => {
             </div>
             <div className="d-flex align-items-start w-100">
                 <ul className="nav nav-pills d-flex flex-column mb-auto pt-2 w-100">
-
-                    <li className="d-flex-inline nav-item">
-                        <a href="/vendas" className="nav-link pt-3 text-white">
-                        <img src={DashboardLogo} className=" d-inline h-100"></img>
-                            <h6 className="d-inline">Vendas</h6>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/agendamentos" className="nav-link pt-3 text-white">
-                            <i className="bi bi-bag-fill"></i>
-                            <img src={DashboardLogo} className=" d-inline h-100"></img>
-                            <h6 className="d-inline">Agendamentos</h6>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/produtos" className="nav-link pt-3 text-white">
-                        <img src={DashboardLogo} className=" d-inline h-100"></img>
-                            <h6 className="d-inline">Produtos</h6>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/usuarios" className="nav-link pt-3 text-white">
-                        <img src={DashboardLogo} className=" d-inline h-100"></img>
-                            <h6 className="d-inline">Usuários</h6>
-                        </a>
-                    </li>
+                    {itemsSidebar.map((item) => (
+                        <SidebarItem key={item.id} item={item} />
+                    ))}
                 </ul>
                 <hr className="dropdown-divider" />
             </div>
