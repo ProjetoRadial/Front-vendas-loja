@@ -11,7 +11,7 @@ const itemsSidebar = [
         id: 1,
         name: "Dashboard",
         icon: DashboardIcon,
-        link: "/",
+        link: "/"
     },
     {
         id: 2,
@@ -30,12 +30,42 @@ const itemsSidebar = [
         name: "Produtos",
         icon: ProdutosIcon,
         link: "/produtos",
+        collapse: [
+            {
+                id: 1,
+                name: "Adicionar produto",
+                link: "/adicionar-produto",
+            },
+            {
+                id: 2,
+                name: "Editar produtos",
+                link: "/editar-produtos",
+            },
+            {
+                id: 3,
+                name: "Estoque",
+                link: "/estoque",
+            },
+        ]
+
     },
     {
         id: 5,
         name: "Usuários",
         icon: UsuariosIcon,
         link: "/usuarios",
+        collapse: [
+            {
+                id: 1,
+                name: "Adicionar novo usuário",
+                link: "/adicionar-usuario",
+            },
+            {
+                id: 2,
+                name: "Editar usuários",
+                link: "/editar-usuarios",
+            },
+        ]
     },
 ];
 
