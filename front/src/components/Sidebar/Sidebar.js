@@ -86,7 +86,6 @@ export const Sidebar = () => {
                         <SidebarItem key={item.id} item={item} />
                     ))}
                 </ul>
-                <hr className="dropdown-divider" />
             </div>
         </div>
     )

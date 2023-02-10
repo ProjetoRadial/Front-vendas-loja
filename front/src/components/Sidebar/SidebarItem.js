@@ -15,6 +15,7 @@ const SidebarItem = (props) => {
         collapseLinkHref = props.item.link // se não tiver uma lista colapsada, o link vai ser o link do item
     } else {
         collapsedItems.map((collapsedItem) => {
+            
             collapseLink = "collapse-" + collapsedItem.id // se tiver uma lista colapsada, o link vai ser o id do item colapsado
             collapseLinkHref = "#" + collapseLink // adiciona o # no link do item colapsado para conseguir ser usado no href
 
@@ -27,7 +28,7 @@ const SidebarItem = (props) => {
         <div>
             <li className="d-block nav-item text-start">
                 <a className="nav-link text-white" data-bs-toggle="collapse" href={`${collapseLinkHref}`} aria-expanded="false" role="button" aria-controls={collapseLink}>
-                    <img src={props.item.icon} className=" d-inline" style={{ "height": "25px" }}></img>
+                    <img src={props.item.icon} className=" d-inline" style={{ "height": "25px" }} alt={`icone ${props.item.name}`}></img>
                     <h6 className="d-inline align-self-center m-2">{props.item.name}</h6>
                 </a>
                 <ul className="collapse" id={collapseLink}>
