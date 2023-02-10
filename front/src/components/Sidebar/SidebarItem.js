@@ -14,10 +14,10 @@ const SidebarItem = (props) => {
         collapseLink = props.item.link // se não tiver uma lista colapsada, o link vai ser o link do item
         collapseLinkHref = props.item.link // se não tiver uma lista colapsada, o link vai ser o link do item
     } else {
-        collapsedItems.map((collapsedItem) => {
+        collapsedItems.map(() => {
             
-            collapseLink = "collapse-" + collapsedItem.id // se tiver uma lista colapsada, o link vai ser o id do item colapsado
-            collapseLinkHref = "#" + collapseLink // adiciona o # no link do item colapsado para conseguir ser usado no href
+            collapseLink = "collapse-" + props.item.id // se tiver uma lista colapsada, o link vai ser "collapse-"" + id do item
+            collapseLinkHref = "#" + collapseLink // adiciona o # para conseguir ser usado no href
 
         })
         
