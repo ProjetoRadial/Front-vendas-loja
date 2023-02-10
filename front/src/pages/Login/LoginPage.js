@@ -29,6 +29,9 @@ export const LoginPage = () => {
                                             LoginComponent(event.target.form[0].value, event.target.form[1].value)
                                                 .then((dados)=>{
                                                     console.log(dados);
+                                                    if(dados.loggedin === true){
+                                                        window.location.href = '/home';
+                                                    }
                                                 })
                                             
                                         }}>Entrar</button>
