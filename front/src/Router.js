@@ -1,6 +1,7 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { HomePage } from './pages/Home/HomePage.js';
 import { LoginPage } from "./pages/Login/LoginPage.js"
+import { HomePage } from './pages/Home/HomePage.js';
 
 function App() {
   return (

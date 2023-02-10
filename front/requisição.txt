@@ -11,3 +11,5 @@ fetch(request)
     .then((infoUser)=>{
         console.log(infoUser);
     });
+
+teste
