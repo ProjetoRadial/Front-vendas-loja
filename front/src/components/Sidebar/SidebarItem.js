@@ -35,7 +35,7 @@ const SidebarItem = (props) => {
                     {/* se o item tiver um array de itens colapsados, ele vai mapear o array e retornar os itens */}
                     {checkCollapse && collapsedItems.map((collapsedItem) => {
                         return (
-                        <li className="w-100">
+                        <li className="w-100" key={collapsedItem.key}>
                             <a className="nav-link text-white" href={collapsedItem.link}>
                                 <h6 className="d-inline align-self-center m-2">{collapsedItem.name}</h6>
                             </a>

@@ -11,40 +11,47 @@ const itemsSidebar = [
         id: 1,
         name: "Dashboard",
         icon: DashboardIcon,
-        link: "/"
+        link: "/",
+        key: 1,
     },
     {
         id: 2,
         name: "Vendas",
         icon: VendasIcon,
         link: "/vendas",
+        key: 2,
     },
     {
         id: 3,
         name: "Agendamentos",
         icon: AgendamentosIcon,
         link: "/agendamentos",
+        key: 3,
     },
     {
         id: 4,
         name: "Produtos",
         icon: ProdutosIcon,
         link: "/produtos",
+        key: 4,
         collapse: [
             {
                 id: 1,
                 name: "Adicionar produto",
                 link: "/adicionar-produto",
+                key: 41,
             },
             {
                 id: 2,
                 name: "Editar produtos",
                 link: "/editar-produtos",
+                key: 42,
             },
             {
                 id: 3,
                 name: "Estoque",
                 link: "/estoque",
+                key: 43,
             },
         ]
 
@@ -54,16 +61,19 @@ const itemsSidebar = [
         name: "Usuários",
         icon: UsuariosIcon,
         link: "/usuarios",
+        key: 5,
         collapse: [
             {
                 id: 1,
                 name: "Adicionar novo usuário",
                 link: "/adicionar-usuario",
+                key: 51,
             },
             {
                 id: 2,
                 name: "Editar usuários",
                 link: "/editar-usuarios",
+                key: 52,
             },
         ]
     },
@@ -71,7 +81,7 @@ const itemsSidebar = [
 
 export const Sidebar = () => {
     return (
-        <div className="left-side-menu position-fixed top-0 bottom-0 pb-2 text-center" style={{ "width": "260px", "background-color": "#313a46" }}>
+        <div className="left-side-menu position-fixed top-0 bottom-0 pb-2 text-center" style={{ "width": "260px", "backgroundColor": "#313a46" }}>
             <div>
                 <a href="/" className="d-block mb-3 mb-md-0 me-md-auto link-dark text-decoration-none pt-4">
                     <span className="d-block">
