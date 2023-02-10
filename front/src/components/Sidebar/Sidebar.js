@@ -81,23 +81,35 @@ const itemsSidebar = [
 
 export const Sidebar = () => {
     return (
-        <div className="left-side-menu position-fixed top-0 bottom-0 pb-2 text-center" style={{ "width": "260px", "backgroundColor": "#313a46" }}>
-            <div>
-                <a href="/" className="d-block mb-3 mb-md-0 me-md-auto link-dark text-decoration-none pt-4">
-                    <span className="d-block">
-                        <img src={OnpagLogo} style={{ "height": "40px" }} alt="Onpag Logo"></img>
-                    </span>
-                    <span className="fs-4 text-white p-10"><h6 className="pt-2">Sistema de Gerenciamento</h6></span>
-                </a>
+        <>
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"style={{ "backgroundColor": "#313a46" }}>Menu</button>
+
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel"style={{ "width": "400px", "backgroundColor": "#313a46" }}>
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Menu Principal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div className="left-side-menu position-fixed top-0 bottom-0 pb-2 text-center" style={{ "width": "400px", "backgroundColor": "#313a46" }}>
+                        <div>
+                            <a href="/" className="d-block mb-3 mb-md-0 me-md-auto link-dark text-decoration-none pt-4">
+                                <span className="d-block">
+                                    <img src={OnpagLogo} style={{ "height": "40px" }} alt="Onpag Logo"></img>
+                                </span>
+                                <span className="fs-4 text-white p-10"><h6 className="pt-2">Sistema de Gerenciamento</h6></span>
+                            </a>
+                        </div>
+                        <div className="d-flex align-items-start w-100">
+                            <ul className="nav nav-pills d-flex flex-column mb-auto pt-2 w-100">
+                                {itemsSidebar.map((item) => (
+                                    <SidebarItem key={item.id} item={item} />
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="d-flex align-items-start w-100">
-                <ul className="nav nav-pills d-flex flex-column mb-auto pt-2 w-100">
-                    {itemsSidebar.map((item) => (
-                        <SidebarItem key={item.id} item={item} />
-                    ))}
-                </ul>
-            </div>
-        </div>
+        </>
     )
 }
 

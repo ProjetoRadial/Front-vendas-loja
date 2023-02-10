@@ -30,7 +30,7 @@ export const LoginPage = () => {
                                                 .then((dados)=>{
                                                     console.log(dados);
                                                     if(dados.loggedin === true){
-                                                        window.location.href = '/home';
+                                                        window.location.href = dados.home;
                                                     }
                                                 })
                                             
