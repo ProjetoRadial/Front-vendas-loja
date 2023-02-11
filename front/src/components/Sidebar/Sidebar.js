@@ -1,10 +1,11 @@
-import OnpagLogo from "../../images/logoOnpag.png"
-import SidebarItem from "./SidebarItem"
-import DashboardIcon from "../../images/dashboard-icon.png"
-import VendasIcon from "../../images/vendas-icon.png"
-import AgendamentosIcon from "../../images/agendamentos-icon.png"
-import ProdutosIcon from "../../images/produtos-icon.png"
-import UsuariosIcon from "../../images/usuarios-icon.png"
+import OnpagLogo from "../../images/logoOnpag.png";
+import SidebarItem from "./SidebarItem";
+import menuIcon from "../../images/menu-icon.png";
+import DashboardIcon from "../../images/dashboard-icon.png";
+import VendasIcon from "../../images/vendas-icon.png";
+import AgendamentosIcon from "../../images/agendamentos-icon.png";
+import ProdutosIcon from "../../images/produtos-icon.png";
+import UsuariosIcon from "../../images/usuarios-icon.png";
 
 const itemsSidebar = [
     {
@@ -82,14 +83,14 @@ const itemsSidebar = [
 export const Sidebar = () => {
     return (
         <>
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"style={{ "backgroundColor": "#313a46" }}>Menu</button>
+            <button className="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"style={{ "backgroundColor": "transparent", "border": "none" }}><img src={menuIcon} alt="menu-icon" style={{"width":"40px"}}></img></button>
 
-            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel"style={{ "width": "400px", "backgroundColor": "#313a46" }}>
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Menu Principal</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <div className="offcanvas offcanvas-start" data-bs-scroll="true" tabIndex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel"style={{ "width": "400px", "backgroundColor": "#313a46" }}>
+                <div className="offcanvas-header">
+                    <h5 className="offcanvas-title" id="offcanvasWithBothOptionsLabel">Menu Principal</h5>
+                    <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body">
+                <div className="offcanvas-body">
                     <div className="left-side-menu position-fixed top-0 bottom-0 pb-2 text-center" style={{ "width": "400px", "backgroundColor": "#313a46" }}>
                         <div>
                             <a href="/" className="d-block mb-3 mb-md-0 me-md-auto link-dark text-decoration-none pt-4">
