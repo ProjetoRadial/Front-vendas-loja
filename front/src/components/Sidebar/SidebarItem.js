@@ -7,17 +7,17 @@ const SidebarItem = (props) => {
     const checkCollapse = collapsedItems ? true : false // checa se o item tem um array de itens colapsados
 
 
-    let collapseLink = "" // variável que vai receber o id da lista colapsada
-    let collapseLinkHref = "" // variável que vai receber o link da lista colapsada
+    let collapseLink = "" // variável que vai receber o link
+    let collapseLinkHref = "" // variável que vai receber o link para o href
 
     if (!checkCollapse) {
-        collapseLink = props.item.link // se não tiver uma lista colapsada, o link vai ser o link do item
+        collapseLink = props.item.link // se não tiver uma lista colapsada, o link vai ser o link do item Ex: (Agendamentos redireciona para /agendamentos)
         collapseLinkHref = props.item.link // se não tiver uma lista colapsada, o link vai ser o link do item
     } else {
         collapsedItems.map(() => {
             
-            collapseLink = "collapse-" + props.item.id // se tiver uma lista colapsada, o link vai ser "collapse-"" + id do item
-            collapseLinkHref = "#" + collapseLink // adiciona o # para conseguir ser usado no href
+            collapseLink = "collapse-" + props.item.id // se tiver uma lista colapsada, o link vai ser "collapse-"" + id do item Ex: (Vendas redireciona para #collapse-2)
+            collapseLinkHref = "#" + collapseLink // adiciona o # para o href entender que é um link interno
 
         })
         
