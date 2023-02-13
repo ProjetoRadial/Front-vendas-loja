@@ -20,9 +20,12 @@ export const CadastroAgendamentoPage = () => {
                                 </div>
                                 <form className='p-2'>
 
-                                    <div className="mb-3 mx-5">
-                                        <label htmlFor="codigo">Código</label>
-                                        <input type="text" className="form-control mt-2" id="codigo" placeholder="Insira o código do agendamento" />
+                                    <div className="d-flex text-center mb-3 mx-5">
+                                        <label className="" htmlFor="codigo">Código</label>
+                                        <div className="input-group">
+                                        <input type="text" className="form-control pt-2" id="codigo" placeholder="Insira o código do agendamento" />
+                                        <button class="btn btn-outline-secondary text-center" type="button" id="button-addon1">Buscar</button>
+                                        </div>
                                     </div>
 
                                     <div className="mb-3 mx-5">
