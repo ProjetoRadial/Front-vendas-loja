@@ -21,6 +21,23 @@ const itemsSidebar = [
         icon: VendasIcon,
         link: "/vendas",
         key: 2,
+        collapse: [
+            {
+                id: 1,
+                name: "Abrir Caixa",
+                link: "/caixa",
+                key: 21,
+            },
+            {
+                id: 2,
+                name: "Consultar vendas",
+                link: "/consulta/vendas",
+                key: 22,
+            }
+        ]
+        
+            
+
     },
     {
         id: 3,
