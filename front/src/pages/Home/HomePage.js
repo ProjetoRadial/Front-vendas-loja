@@ -10,18 +10,3 @@ export const HomePage = () => {
         </>
     );
 };
-
-const info = {
-    id: "0001",
-    DataHora: "13/02/2023 10:00:00",
-    CodCli: '123456',
-    NomeCli: 'Homem de neve',
-    Produto: {
-        itensVendidos: {
-            idVenda: "0001",
-            idItem: "7"
-        }
-    }
-}
-
-console.log(info);
