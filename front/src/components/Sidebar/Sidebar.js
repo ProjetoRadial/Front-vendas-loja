@@ -12,7 +12,7 @@ const itemsSidebar = [
         id: 1,
         name: "Dashboard",
         icon: DashboardIcon,
-        link: "/",
+        link: "/home",
         key: 1,
     },
     {
