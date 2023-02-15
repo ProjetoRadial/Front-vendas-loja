@@ -1,13 +1,8 @@
 import React from "react"
 import { LoginComponent } from "../../components/LoginComponent/LoginComponent"
 import OnpagLogo from "../../images/logoOnpag.png"
-import axios from 'axios'
-//import {LoginComponent} from "../../components/LoginComponent/LoginComponent.js"
-//import { redirect } from "react-router-dom";
 
 export const LoginPage = () => {
-
-    
     return (
         <section className="vh-100" style={{ "background": "linear-gradient(to right, rgba(44, 13, 70, 1), rgba(141, 16, 131, 1))" }}>
             <div className="container py-5 h-100">
@@ -37,7 +32,6 @@ export const LoginPage = () => {
                                                         window.location.href = dados.home;
                                                     }
                                                 })
-                                            
                                         }}>Entrar</button>
                                     </form>
                                 </div>
