@@ -5,7 +5,7 @@ import env from "react-dotenv";
 export async function LoginComponent (username, password, token){
     const res = await fetch({
         method: 'post',
-        url: env.API_URL, 
+        url: env.API_URL_AUTH, 
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
         body: `username=${username}&password=${password}`
     });
