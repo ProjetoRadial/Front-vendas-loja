@@ -12,7 +12,7 @@ export const ConsultaVendasComponent = function () {
     let taxa = 0;
 
     async function getData(){
-        const {data} = await axios.get('http://172.16.2.103:3001/dashboard')
+        const {data} = await axios.get('http://172.16.2.103:3001/dashboard');
         setData(data);
     };
 

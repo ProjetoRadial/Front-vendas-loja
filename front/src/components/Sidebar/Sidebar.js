@@ -84,7 +84,7 @@ const itemsSidebar = [
             {
                 id: 1,
                 name: "Adicionar novo usuário",
-                link: "/adicionar-usuario",
+                link: "/cadastro/funcionario",
                 key: 51,
             },
             {
