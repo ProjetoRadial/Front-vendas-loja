@@ -5,9 +5,6 @@ import { LoginPage } from "./pages/Login/LoginPage.js"
 import { CadastroFuncionarioPage } from "./pages/Cadastro/CadastroFuncionario/CadastroFuncionarioPage.js"
 import { CadastroProdutoPage } from './pages/Cadastro/CadastroProduto/CadastroProdutoPage.js';
 import { CadastroAgendamentoPage } from './pages/Cadastro/CadastroAgendamento/CadastroAgendamento.js';
-// import { Caixa } from './pages/Caixa/Caixa.js';
-
-
 
 function App() {
   return (

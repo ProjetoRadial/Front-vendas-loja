@@ -1,21 +1,9 @@
 import React from 'react';
-import * as dotenv from 'dotenv'
-import axios from 'axios';
-import { useState, useEffect } from 'react';
 import Sidebar from '../../../components/Sidebar/Sidebar';
-dotenv.config()
+
 
 export const CadastroFuncionarioPage = () => {
 
-    const [data, setData] = useState([]);
-
-    async function getData(body){
-        const {data} = await axios.post(process.env.API_HOST+'/cadastro-usuario', body)
-        setData(data);
-    };
-    useEffect(()=>{getData()},[]);
-    
-   
     return (
 
         <section className="vh-100">
@@ -35,17 +23,8 @@ export const CadastroFuncionarioPage = () => {
                                 </div>
                                 <form className='p-2' onSubmit={function (event) {
                                     event.preventDefault();
-                                    let body = {
-                                        nome: event.target[0].value,
-                                        matricula: event.target[1].value,
-                                        admin: event.target[2].checked,
-                                        senha0: event.target[3].value,
-                                        senha1: event.target[4].value
-                                    };
-                                    getData(body);
-                                    
-                                    //const myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
-
+                                 
+                                 
                                     
                                 }}>
                                     <div className="mb-3 mx-5">
