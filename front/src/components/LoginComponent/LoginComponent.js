@@ -10,5 +10,6 @@ export async function LoginComponent (username, password, token){
         body: `username=${username}&password=${password}`
     });
     const result = await res.json();
+    console.log(result);
     return result;
 }
