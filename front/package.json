@@ -40,7 +40,8 @@
   },
   "react-dotenv": {
     "whitelist": [
-      "API_URL_AUTH"
+      "API_URL_AUTH",
+      "API_URL_DASHBOARD"
     ]
   }
 }
