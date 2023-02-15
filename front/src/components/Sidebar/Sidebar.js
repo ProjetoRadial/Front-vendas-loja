@@ -1,3 +1,4 @@
+import React from "react";
 import OnpagLogo from "../../images/logoOnpag.png";
 import SidebarItem from "./SidebarItem";
 import menuIcon from "../../images/menu-icon.png";

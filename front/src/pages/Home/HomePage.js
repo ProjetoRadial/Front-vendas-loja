@@ -1,3 +1,4 @@
+import React from "react";
 import { ConsultaVendasComponent } from "../../components/ConsultaVendasComponent/ConsultaVendasComponent";
 import Sidebar from "../../components/Sidebar/Sidebar";
 

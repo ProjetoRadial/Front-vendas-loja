@@ -1,3 +1,4 @@
+import React from "react"
 import { LoginComponent } from "../../components/LoginComponent/LoginComponent"
 import OnpagLogo from "../../images/logoOnpag.png"
 import axios from 'axios'

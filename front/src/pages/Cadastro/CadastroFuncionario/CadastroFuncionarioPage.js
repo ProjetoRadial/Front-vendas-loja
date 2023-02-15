@@ -1,8 +1,9 @@
+import React from 'react';
 import * as dotenv from 'dotenv'
-dotenv.config()
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Sidebar from '../../../components/Sidebar/Sidebar';
+dotenv.config()
 
 export const CadastroFuncionarioPage = () => {
 
