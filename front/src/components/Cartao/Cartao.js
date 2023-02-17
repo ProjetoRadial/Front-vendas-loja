@@ -4,7 +4,6 @@ const Cartao = (props) => {
     
     const handleClick = (e) => {
         e.preventDefault();
-        console.log(e.target.innerText);
         props.onSelecionarServico(props.produto, e.target.innerText);
     }
     
@@ -17,7 +16,7 @@ const Cartao = (props) => {
                         <h3 className="title">{props.produto.nome}</h3>
                         <ul className="icon">
                             {Object.keys(props.produto.preco).map((key) => (
-                                <li onClick={handleClick}><a className='btn btn-primary'>{key}</a></li>
+                                <li key={key} onClick={handleClick}><a className='btn btn-primary'>{key}</a></li>
                             ))}
 
                         </ul>
