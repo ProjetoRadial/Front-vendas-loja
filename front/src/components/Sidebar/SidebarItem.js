@@ -31,7 +31,7 @@ const SidebarItem = (props) => {
                     {checkCollapse && collapsedItems.map((collapsedItem) => {
                         return (
                         <li className="w-100" key={collapsedItem.key}>
-                            <a className="nav-link text-white" href={collapsedItem.link}>
+                            <a href={collapsedItem.link} className="nav-link text-white">
                                 <h6 className="d-inline align-self-center m-2">{collapsedItem.name}</h6>
                             </a>
                         </li>

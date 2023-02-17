@@ -1,71 +1,18 @@
-import React from 'react';
+
 import env from "react-dotenv";
-import { useEffect, useState } from 'react';
 
+export async function ConsultaVendasComponent () {
+       
+    const res = await fetch(env.API_URL_DASHBOARD, { 
+        method: 'get',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+    });
+    
+   
 
-export const ConsultaVendasComponent = function () {
+    
+ 
 
-    const [data, setData] = useState([]);
-    let total = 0;
-    let dinheiro = 0;
-    let credito = 0;
-    let pix = 0;
-    let debito = 0;
-    let taxa = 0;
-
-    async function getData() {
-        const res = await fetch({ method: 'get', url: env.API_URL_DASHBOARD });               
-        setData(res);
-    };
-
-    useEffect(() => {
-        getData()
-    }, [])
-
-    return (
-        <div>
-            <table className="table table table-striped">
-                <thead>
-                    <tr><td colSpan={7} style={{ "textAlign": "center", "fontSize": "25px" }}>Vendas do dia</td></tr>
-                    <tr>
-                        <td>#id</td>
-                        <td>Hora</td>
-                        <td>Produto</td>
-                        <td>Valor Unitário</td>
-                        <td>Forma de Pagamento</td>
-                        <td>taxa</td>
-                        <td>Valor Total</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    {data.map((campo) => {
-                        total = total + campo.valor;
-                        if (campo.formaPagamento === "Debito") { debito = debito + campo.valor; taxa = 1; };
-                        if (campo.formaPagamento === "Credito") { credito = credito + campo.valor; taxa = 2; };
-                        if (campo.formaPagamento === "Pix") { pix = pix + campo.valor; taxa = 0; };
-                        if (campo.formaPagamento === "Dinheiro") { dinheiro = dinheiro + campo.valor; taxa = 0; };
-
-                        return (
-                            <tr key={campo.id}>
-                                <td>{campo.id}</td>
-                                <td>{campo.dataHora}</td>
-                                <td>{campo.produto}</td>
-                                <td>{(campo.valor).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</td>
-                                <td>{campo.formaPagamento}</td>
-                                <td>{taxa}%</td>
-                                <td>{(campo.valor * taxa / 100 + (campo.valor)).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</td>
-                            </tr>
-                        )
-                    })}
-                </tbody>
-                <tfoot>
-                    <tr><td colSpan={6}><strong>Pix</strong></td><td><strong>{pix.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</strong></td></tr>
-                    <tr><td colSpan={6}><strong>Cartão de Debito</strong></td><td><strong>{debito.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</strong></td></tr>
-                    <tr><td colSpan={6}><strong>Cartão de Credito</strong></td><td><strong>{credito.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</strong></td></tr>
-                    <tr><td colSpan={6}><strong>Dinheiro</strong></td><td><strong>{dinheiro.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</strong></td></tr>
-                    <tr><td colSpan={6}><strong>Saldo Total</strong></td><td><strong>{total.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</strong></td></tr>
-                </tfoot>
-            </table>
-        </div>
-    );
+ 
+    return;
 };

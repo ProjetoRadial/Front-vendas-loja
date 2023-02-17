@@ -11,29 +11,29 @@ import UsuariosIcon from "../../images/usuarios-icon.png";
 const itemsSidebar = [
     {
         id: 1,
+        key: 1,
         name: "Dashboard",
         icon: DashboardIcon,
         link: "/home",
-        key: 1,
     },
     {
         id: 2,
+        key: 2,
         name: "Vendas",
         icon: VendasIcon,
         link: "/vendas",
-        key: 2,
         collapse: [
             {
                 id: 1,
+                key: 21,
                 name: "Abrir Caixa",
                 link: "/caixa",
-                key: 21,
             },
             {
                 id: 2,
+                key: 22,
                 name: "Consultar vendas",
                 link: "/consulta/vendas",
-                key: 22,
             }
         ]
         
@@ -42,59 +42,65 @@ const itemsSidebar = [
     },
     {
         id: 3,
+        key: 3,
         name: "Agendamentos",
         icon: AgendamentosIcon,
         link: "/agendamentos",
-        key: 3,
     },
     {
         id: 4,
+        key: 4,
         name: "Produtos",
         icon: ProdutosIcon,
         link: "/produtos",
-        key: 4,
         collapse: [
             {
                 id: 1,
+                key: 41,
                 name: "Adicionar produto",
                 link: "/adicionar-produto",
-                key: 41,
             },
             {
                 id: 2,
+                key: 42,
                 name: "Editar produtos",
                 link: "/editar-produtos",
-                key: 42,
             },
             {
                 id: 3,
+                key: 43,
                 name: "Estoque",
                 link: "/estoque",
-                key: 43,
             },
         ]
 
     },
     {
         id: 5,
+        key: 5,
         name: "Usuários",
         icon: UsuariosIcon,
         link: "/usuarios",
-        key: 5,
         collapse: [
             {
                 id: 1,
+                key: 51,
                 name: "Adicionar novo usuário",
                 link: "/cadastro/funcionario",
-                key: 51,
             },
             {
                 id: 2,
+                key: 52,
                 name: "Editar usuários",
                 link: "/editar-usuarios",
-                key: 52,
             },
         ]
+    },{
+        id: 6,
+        key: 6,
+        name: "Configurações",
+        icon: UsuariosIcon,
+        link: "/configuracoes",
     },
 ];
 
@@ -111,7 +117,7 @@ export const Sidebar = () => {
                 <div className="offcanvas-body">
                     <div className="left-side-menu position-fixed top-0 bottom-0 pb-2 text-center" style={{ "width": "400px", "backgroundColor": "#313a46" }}>
                         <div>
-                            <a href="/" className="d-block mb-3 mb-md-0 me-md-auto link-dark text-decoration-none pt-4">
+                            <a href="/home" className="d-block mb-3 mb-md-0 me-md-auto link-dark text-decoration-none pt-4">
                                 <span className="d-block">
                                     <img src={OnpagLogo} style={{ "height": "40px" }} alt="Onpag Logo"></img>
                                 </span>
