@@ -1,7 +1,6 @@
+import React from "react"
 import { LoginComponent } from "../../components/LoginComponent/LoginComponent"
 import OnpagLogo from "../../images/logoOnpag.png"
-//import {LoginComponent} from "../../components/LoginComponent/LoginComponent.js"
-//import { redirect } from "react-router-dom";
 
 export const LoginPage = () => {
     return (
@@ -24,16 +23,15 @@ export const LoginPage = () => {
                                             <input type="password" id="password" className="form-control form-control-lg" />
                                             <label className="form-label mt-2" htmlFor="password">Senha</label>
                                         </div>
-                                        <button className="btn btn-outline-light btn-lg px-5" type="submit" onClick={(event)=>{
+                                        <button className="btn btn-outline-light btn-lg px-5" type="submit" onClick={(event) => {
                                             event.preventDefault();
                                             LoginComponent(event.target.form[0].value, event.target.form[1].value)
-                                                .then((dados)=>{
-                                                    console.log(dados);
-                                                    if(dados.loggedin === true){
-                                                        window.location.href = '/home';
+                                                .then((dados) => {
+                                                    sessionStorage.setItem("session",JSON.stringify(dados))
+                                                    if (dados.loggedin === true) {
+                                                        window.location.href = dados.home;
                                                     }
                                                 })
-                                            
                                         }}>Entrar</button>
                                     </form>
                                 </div>
@@ -42,7 +40,7 @@ export const LoginPage = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
 

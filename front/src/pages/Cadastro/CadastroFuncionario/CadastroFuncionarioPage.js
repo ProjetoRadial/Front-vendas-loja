@@ -1,12 +1,15 @@
-import Sidebar from '../../../components/Sidebar/Sidebar'
+import React from 'react';
+import Sidebar from '../../../components/Sidebar/Sidebar';
+
 
 export const CadastroFuncionarioPage = () => {
+
     return (
 
         <section className="vh-100">
 
             <Sidebar />
-            <div className="container h-100" style={{ "paddingLeft": "260px" }}>
+            <div className="container h-100">
                 <div className="row d-flex h-100">
                     <div className="d-flex justify-content-center">
                         <h1 className='pt-4'>Cadastro de Funcionário</h1>
@@ -18,7 +21,12 @@ export const CadastroFuncionarioPage = () => {
                                     <h4 className="text-dark-50 mt-0 font-weight-bold">Preencha os campos abaixo</h4>
                                     <p className="text-muted mb-4">Cadastre um funcionário</p>
                                 </div>
-                                <form className='p-2'>
+                                <form className='p-2' onSubmit={function (event) {
+                                    event.preventDefault();
+                                 
+                                 
+                                    
+                                }}>
                                     <div className="mb-3 mx-5">
                                         <label htmlFor="nome">Nome</label>
                                         <input type="text" className="form-control mt-2" id="nome" placeholder="Insira o nome do funcionário" />
@@ -44,7 +52,7 @@ export const CadastroFuncionarioPage = () => {
                                         </div>
                                     </div>
                                     <div className="text-center pt-3">
-                                        <button type="submit" className="btn btn-primary w-md">Cadastrar</button>
+                                        <button type="submit" className="btn btn-primary w-md" >Cadastrar</button>
                                     </div>
                                 </form>
 
@@ -57,4 +65,3 @@ export const CadastroFuncionarioPage = () => {
         </section>
     )
 }
-

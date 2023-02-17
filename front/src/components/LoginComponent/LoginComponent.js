@@ -1,9 +1,14 @@
-export async function LoginComponent (username, password, token){
-    const res = await fetch('http://172.16.2.103:3001/auth',{
-        method: 'POST',
+import env from 'react-dotenv'
+
+export async function LoginComponent (username, password, token){ 
+    
+    const res = await fetch(env.API_URL_AUTH, {
+        method: 'post',
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
         body: `username=${username}&password=${password}`
     });
-    const result = await res.json();
-    return result;
+    const temp = await res.json();
+    temp.dataUser[0].senha = "********";
+    env.SESSION = temp;
+    return env.SESSION;
 }
