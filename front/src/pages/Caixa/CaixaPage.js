@@ -87,7 +87,7 @@ export const CaixaPage = () => {
                     <h5 className='text-center'>Caixa</h5>
                 </div>
                 <div className='card-body-responsive flex h-100'>
-                    <div className='row h-100' style={{ 'backgroundColor': '#f8f8f8' }}>
+                    <div className='d-flex flex-wrap h-100' style={{ 'backgroundColor': '#f8f8f8' }}>
                         <div className='col-9 d-flex flex-wrap justify-content-between p-2' >
                             {produtos.map((produto) => (
                                 <Cartao

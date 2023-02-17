@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import CartaoEscolar from '../../images/cartao-escolar.png'
+import './ListaCaixa.css'
 
 const ListaCaixa = (props) => {
 
@@ -13,10 +14,10 @@ const ListaCaixa = (props) => {
             <div>
                 <h5 className='text-end px-3 '>Pedido #10329</h5>
             </div>
-
+            <div className='d-flex-column justify-content-between h-60 overflow-scroll' style={{'max-height': '400px'}}>
             {props.produtos.produtosCaixa.map((produto, index) => (
                 <div className="container" style={{ 'backgroundColor': '#fff' }}>
-                    <div className="row mt-5">
+                    <div className="row mb-5">
                         <div className="col d-flex border p-2">
                             <div className="col d-flex border p-2">
                                 <div className="col d-flex ">
@@ -37,8 +38,9 @@ const ListaCaixa = (props) => {
                 </div>
                 
             ))}
+            </div>
 
-            <div className='m-auto'>
+            <div className='footer'>
                 <div className='d-flex justify-content-between aling-items-end px-3'>
                     <h6>Cliente:</h6>
                     <h6>Luiz Sérgio Marrano</h6>
