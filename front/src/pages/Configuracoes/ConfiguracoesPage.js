@@ -1,13 +1,18 @@
 import React from "react";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import lojaSuzano from "../../images/loja-suzano.png"
-import pos from "../../images/foto-pos.png"
+import loja from "../../images/loja.png";
+import lojaSuzano from "../../images/loja-suzano.png";
+import lojaPoa from "../../images/loja-poa.png";
+import lojaFerraz from "../../images/loja-ferraz.png";
+import pos from "../../images/foto-pos.png";
 import { useState } from "react";
 
 export const Configuracoes = () => {
     const dataSession = JSON.parse(sessionStorage.session);
     const [lista, setLista] = useState([]);
     let [key, setKey] = useState([]);
+    
+
     const posLojas = {
         suzano:[
             "Suzano 1",
@@ -30,16 +35,17 @@ export const Configuracoes = () => {
                     <div className="card mb-3" style={{ "maxWidth": " 540px" }}>
                         <div className="row g-0">
                             <div className="col-md-4">
-                                <img src={lojaSuzano} className="img-fluid rounded-start" alt="foto-da-loja-de-suzano" />
+                                <img src={loja} className="img-fluid rounded-start" alt="foto-da-loja-de-suzano" />
                             </div>
                             <div className="col-md-8">
                                 <div className="card-body">
                                     <h5 className="card-title">Loja</h5>
-                                    <p className="card-text">Selecione a loja que está trabalhando hoje.</p>
+                                    <p className="card-text">Selecione a loja.</p>
                                     <p className="card-text"><small className="text-muted">
                                         <select className="form-select" aria-label="Default select example" onChange={(event) => {
                                             sessionStorage.setItem("LOJA", event.target.value)
                                             setLista((posLojas[event.target.value]));
+                                            
                                         }}>
                                             <option defaultValue="1">Selecione a loja</option>
                                             <option value="suzano">Suzano</option>
@@ -58,7 +64,7 @@ export const Configuracoes = () => {
                             <div className="col-md-8">
                                 <div className="card-body">
                                     <h5 className="card-title">POS</h5>
-                                    <p className="card-text">Selecione o POS que está trabalhando hoje.</p>
+                                    <p className="card-text">Selecione o POS.</p>
                                     <p className="card-text"><small className="text-muted">
                                         <select id="pos" className="form-select" aria-label="Default select example" onChange={(event) => {
                                             sessionStorage.setItem("POS", event.target.value)
@@ -74,7 +80,7 @@ export const Configuracoes = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="d-grid gap-2">
+                    <div className="d-grid gap-2 col-6 mx-auto">
                         <button type="submit" className="btn btn-primary">Alterar</button>
                     </div>
                 </form>
