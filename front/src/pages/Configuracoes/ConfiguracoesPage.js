@@ -1,9 +1,6 @@
 import React from "react";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import loja from "../../images/loja.png";
-import lojaSuzano from "../../images/loja-suzano.png";
-import lojaPoa from "../../images/loja-poa.png";
-import lojaFerraz from "../../images/loja-ferraz.png";
 import pos from "../../images/foto-pos.png";
 import { useState } from "react";
 
