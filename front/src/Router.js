@@ -6,6 +6,9 @@ import { CadastroFuncionarioPage } from "./pages/Cadastro/CadastroFuncionario/Ca
 import { CadastroProdutoPage } from './pages/Cadastro/CadastroProduto/CadastroProdutoPage.js';
 import { CadastroAgendamentoPage } from './pages/Cadastro/CadastroAgendamento/CadastroAgendamento.js';
 import { Configuracoes } from './pages/Configuracoes/ConfiguracoesPage.js'
+import CaixaPage from './pages/Caixa/CaixaPage.js';
+
+
 
 function App() {
   return (
@@ -19,6 +22,13 @@ function App() {
           <Route path='/cadastro/produto' element={<CadastroProdutoPage />} />
           <Route path='/cadastro/agendamento' element={<CadastroAgendamentoPage />} />
           <Route path='/cadastro/funcionario' element={<CadastroFuncionarioPage />} />
+          <Route path='/' element={<LoginPage/>} />
+          <Route path='/home' element={<HomePage/>} />
+          <Route path='/cadastro/produto' element={<CadastroProdutoPage/>} />
+          <Route path='/cadastro/agendamento' element={<CadastroAgendamentoPage/>} />
+          <Route path='/cadastro/funcionario' element={<CadastroFuncionarioPage/>} />
+          <Route path='/login' element={<LoginPage/>} />
+          <Route path='/caixa' element={<CaixaPage/>} />
         </Routes>
       </Router>
     </div>
