@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React from 'react';
 import CartaoEscolar from '../../images/cartao-escolar.png'
 import './ListaCaixa.css'
 

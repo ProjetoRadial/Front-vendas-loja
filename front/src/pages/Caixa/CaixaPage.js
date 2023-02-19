@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
+import React from 'react'
+import { useEffect, useState } from 'react'
 import Cartao from '../../components/Cartao/Cartao'
 import ListaCaixa from '../../components/ListaCaixa/ListaCaixa'
 import './CaixaPage.css'
-import { useState } from 'react'
 import OnpagLogo from "../../images/logoOnpag.png"
 import CartaoComum from "../../images/cartao-comum.png"
 import CartaoSenior from "../../images/cartao-senior.png"
@@ -18,7 +18,7 @@ export const CaixaPage = () => {
             imagem: CartaoComum,
             preco: {
                 '1ª via': 0,
-                '2ª via': 26.50
+                '2ª via': 53
             }
         },
         {
@@ -27,7 +27,7 @@ export const CaixaPage = () => {
             imagem: CartaoSenior,
             preco: {
                 '1ª via': 0,
-                '2ª via': 50.00
+                '2ª via': 53
             }
         },
         {
@@ -36,7 +36,7 @@ export const CaixaPage = () => {
             imagem: CartaoVT,
             preco: {
                 '1ª via': 0,
-                '2ª via': 26.50
+                '2ª via': 53
             }
         },
         {

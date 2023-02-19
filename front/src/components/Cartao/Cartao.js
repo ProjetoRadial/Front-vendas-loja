@@ -1,4 +1,5 @@
 import './Cartao.css';
+import React from 'react';
 
 const Cartao = (props) => {
     
