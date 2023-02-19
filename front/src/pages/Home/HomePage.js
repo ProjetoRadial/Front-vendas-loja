@@ -1,10 +1,10 @@
 import React from "react";
-import { ConsultaVendasComponent } from "../../components/ConsultaVendasComponent/ConsultaVendasComponent";
+import ConsultaVendasComponent from "../../components/ConsultaVendasComponent/ConsultaVendasComponent";
 import Sidebar from "../../components/Sidebar/Sidebar";
 
 export const HomePage = () => {
     const dataSession = JSON.parse(sessionStorage.session)
-    
+
 
 
     return (
@@ -25,17 +25,7 @@ export const HomePage = () => {
                             <td>Valor Total</td>
                         </tr>
                     </thead>
-                    <tbody>
-                        {/* <ConsultaVendasComponent/> */}
-                    </tbody>
-                    <tfoot>
-                        <tr><td colSpan={6}><strong>Pix</strong></td><td><strong>R$ 0,00</strong></td></tr>
-                        <tr><td colSpan={6}><strong>Cartão de Debito</strong></td><td><strong>R$ 0,00</strong></td></tr>
-                        <tr><td colSpan={6}><strong>Cartão de Credito</strong></td><td><strong>R$ 0,00</strong></td></tr>
-                        <tr><td colSpan={6}><strong>Dinheiro</strong></td><td><strong>R$ 0,00</strong></td></tr>
-                        <tr><td colSpan={6}><strong>Saldo Total</strong></td><td><strong>R$ 0,00</strong></td></tr>
-                    </tfoot>
-
+                    <ConsultaVendasComponent />
                 </table>
             </div>
 
