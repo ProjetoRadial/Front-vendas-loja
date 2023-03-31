@@ -23,7 +23,7 @@ const ListaCaixa = (props) => {
                                 <div className="col d-flex ">
                                     <img className="img-fluid w-100 h-100" src={produto.imagem} alt="teste" style={{}} />
                                 </div>
-                                <div className="col mx-2">
+                                <div className="col d-flex flex-column mx-2">
                                     <h6>{produto.nome}</h6>
                                     <div>
                                         <div className='d-flex justify-content-between align-items-center'>
@@ -41,7 +41,7 @@ const ListaCaixa = (props) => {
             </div>
 
             <div className='footer'>
-                <div className='d-flex justify-content-between aling-items-end px-3'>
+                <div className='d-flex justify-content-end aling-items-end px-3'>
                     <h6>Cliente:</h6>
                     <h6>Luiz Sérgio Marrano</h6>
                 </div>

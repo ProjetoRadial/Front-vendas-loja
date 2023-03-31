@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react'
 import Cartao from '../../components/Cartao/Cartao'
 import ListaCaixa from '../../components/ListaCaixa/ListaCaixa'
 import './CaixaPage.css'
-import OnpagLogo from "../../images/logoOnpag.png"
 import CartaoComum from "../../images/cartao-comum.png"
 import CartaoSenior from "../../images/cartao-senior.png"
 import CartaoVT from "../../images/cartao-vt.png"
